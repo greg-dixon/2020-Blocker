@@ -12,8 +12,8 @@ const obj = {
     court: "Nachos",
     ballots: "ballots DO YOUR CIVIC DUTY AND VOTE",
     election: "Hunger Games",
-    policy: "puppies",
-    policies: "puppies",
+    // policy: "puppies",
+    // policies: "puppies",
     "Joe Biden": "Joe Shmoe Biden",
     Stock: "fish",
     stocks: "fish",
@@ -22,26 +22,34 @@ const obj = {
 
 // Instead of using the / regex / g syntax, you can construct a new RegExp object:
 
-// var replace = "regex";
-// var re = new RegExp(replace, "g");
-// // You can dynamically create regex objects this way.Then you will do :
-
-// "mystring".replace(re, "newstring");
-
-
-
 //massive function: 
 //iterate through object
 //replace all the words with our values
-
+for (let x in obj) {
+    if (document.body.innerHTML.includes(x)) {
+        alert('WARNING: The content on this page would have horrified and disturbed you and destroyed your faith in humanity. That is why we\'ve replaced those trigger words with something much more pleasant :)')
+        break
+    }
+}
 for (let x in obj) {
     let toBeRemoved = new RegExp(x, "gi")
         // let toReplaceWith = new RegExp(obj[x])
     document.body.innerHTML = document.body.innerHTML.replace(toBeRemoved,
-        obj[x])
+            obj[x])
+        // if (document.body.innerText.includes(x)) {
+        //     alert('DANGER')
 
+    // }
 }
 
+function save_options() {
+    let removed = document.getElementById('remove').value;
+    let replaceWith = document.getElementById('replace').value;
+
+    obj[removed] = replaceWith;
+}
+document.getElementById('Submit').addEventListener('click',
+    save_options);
 
 
 //have an alert that says the page is about 2020
@@ -51,31 +59,3 @@ for (let x in obj) {
 // add icon
 
 // user options
-// Saves options to chrome.storage
-
-function save_options() {
-    let removed = document.getElementById('remove').value;
-    let replaceWith = document.getElementById('replace').value;
-    obj[removed] = replaceWith;
-    // replaceWords();
-    let toBeRemoved = new RegExp(removed, "gi")
-        // let toReplaceWith = new RegExp(obj[x])
-    document.body.innerHTML = document.body.innerHTML.replace(toBeRemoved,
-        replaceWith)
-}
-document.getElementById('save').addEventListener('click',
-    save_options);
-
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
-// function restore_options() {
-//     // Use default value color = 'red' and likesColor = true.
-//     chrome.storage.sync.get({
-//         favoriteColor: 'red',
-//         likesColor: true
-//     }, function(items) {
-//         document.getElementById('color').value = items.favoriteColor;
-//         document.getElementById('like').checked = items.likesColor;
-//     });
-// }
-// document.addEventListener('DOMContentLoaded', restore_options);

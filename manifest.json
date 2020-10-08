@@ -5,7 +5,7 @@
     "description": "The 2020 blocker is made for people who can't even anymore.",
     "content_scripts": [{
         "matches": ["<all_urls>"],
-        "js": ["./main.js", "./user.js"]
+        "js": ["./main.js"]
     }],
     "browser_action": {
         "default_icon": "off.png",
@@ -15,6 +15,7 @@
         "page": "options.html",
         "open_in_tab": false
     }
+
 
 }
 
