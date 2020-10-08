@@ -20,11 +20,7 @@ const obj = {
     census: "tacos",
 }
 
-// Instead of using the / regex / g syntax, you can construct a new RegExp object:
-
-//massive function: 
-//iterate through object
-//replace all the words with our values
+//massive function: iterate through object /replace all the words with our values
 for (let x in obj) {
     if (document.body.innerHTML.includes(x)) {
         alert('WARNING: The content on this page would have horrified and disturbed you and destroyed your faith in humanity. That is why we\'ve replaced those trigger words with something much more pleasant :)')
@@ -33,19 +29,13 @@ for (let x in obj) {
 }
 for (let x in obj) {
     let toBeRemoved = new RegExp(x, "gi")
-        // let toReplaceWith = new RegExp(obj[x])
     document.body.innerHTML = document.body.innerHTML.replace(toBeRemoved,
-            obj[x])
-        // if (document.body.innerText.includes(x)) {
-        //     alert('DANGER')
-
-    // }
+        obj[x])
 }
 
 function save_options() {
     let removed = document.getElementById('remove').value;
     let replaceWith = document.getElementById('replace').value;
-
     obj[removed] = replaceWith;
 }
 document.getElementById('Submit').addEventListener('click',
