@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "2020 blocker",
+    "name": "2020 Blocker",
     "version": "1.0",
     "description": "The 2020 blocker is made for people who can't even anymore.",
     "content_scripts": [{

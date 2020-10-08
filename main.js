@@ -8,12 +8,12 @@ const obj = {
     Pence: "Irrevelant",
     debate: "Carnival",
     Trump: "Orange",
-    Politics: "jokes",
+    politics: "jokes",
     court: "Nachos",
     ballots: "ballots DO YOUR CIVIC DUTY AND VOTE",
     election: "Hunger Games",
     "Joe Biden": "Joe Shmoe Biden",
-    Stock: "fish",
+    stock: "fish",
     stocks: "fish",
     census: "taco",
     officer: "avatar"
@@ -21,6 +21,9 @@ const obj = {
     McConnell: "Toadface"
     stimulus: "monay monay monay!"
     "White House": "Lovely Shade of Alabaster House"
+    rally: "waste of time"
+    rallies: "wastes of time"
+
 }
 const hide = (remove, replace) => {
     //massive function: iterate through object /replace all the words with our values
