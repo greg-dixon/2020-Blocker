@@ -15,8 +15,12 @@ const obj = {
     "Joe Biden": "Joe Shmoe Biden",
     Stock: "fish",
     stocks: "fish",
-    census: "tacos",
+    census: "taco",
     officer: "avatar"
+    campaign: "karaoke"
+    McConnell: "Toadface"
+    stimulus: "monay monay monay!"
+    "White House": "Lovely Shade of Alabaster House"
 }
 const hide = (remove, replace) => {
     //massive function: iterate through object /replace all the words with our values
